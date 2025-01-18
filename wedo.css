@@ -1,0 +1,626 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,700");
+
+html, body {
+    max-width: 1910px; /* Limitar el ancho máximo de todo el layout */
+    margin: 0 auto;
+    overflow-x: hidden; /* Esto evita que haya desplazamiento hacia la derecha */
+    width: 100%;
+    overscroll-behavior-y: none; /* Evita rebote al final del scroll */
+}
+
+/* tipografia --------------------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Futura PT', sans-serif; /* Usar Futura PT para los encabezados */
+}
+
+body, p, li, a {
+    font-family: "Oswald", sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* Estilo de texto normal */
+p, li, a {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* navbar-------------------------------------------------------------- */
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0rem;
+
+  z-index: 10;
+  background-color: transparent; /* Navbar transparente inicial */
+  transition: background-color 0.6s ease; /* Transición suave al cambiar color */
+}
+
+.logo img {
+    height: calc(10vw + 10px); /* Ajusta el tamaño proporcionalmente */
+    width: auto;
+    max-height: calc(4.5vw + 12px);
+    margin-left: 3rem;
+}
+
+/* Estilo cuando el navbar se oscurece */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.2); /* Un fondo oscuro */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0 5rem;
+  margin:2% 0;
+  display:flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding-left: 3rem;
+  transition: color 0.3s;
+}
+
+.hamburger-icon {
+    display: none; /* Ocultar por defecto */
+    cursor: pointer;
+}
+
+#mobilemenu {
+    display: none;
+}
+
+.navbar ul li a:hover {
+  color: #346A44;
+}
+
+#mobilemenu {
+    display: none;
+}
+
+/* mainpicture -------------------------------------------------------------- */
+
+svg {
+  display: block;
+}
+
+picture {
+    display: block; /* Asegura que el elemento ocupe su propio bloque */
+    width: 100%; /* La imagen se adaptará al ancho de la ventana */
+    height: 100vh; /* La altura máxima será igual al viewport */
+    position: relative; /* Necesario para posicionar correctamente los elementos internos */
+    overflow: hidden; /* Evita que el contenido desborde los límites */
+}
+
+picture img {
+  position: fixed;
+  display: block;
+  
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+  object-position: center; /* Centra la imagen si se recorta */
+  max-width: 1910px; /* Requiere cambiar a su vez el max-width de html, body*/
+  margin: 0 auto;
+  max-height: 100vh; /* Evita que la imagen supere el alto del viewport */
+}
+
+picture svg {
+    position: absolute; /* Asegura que el SVG esté en la misma posición que la imagen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Adapta el SVG al ancho del <picture> */
+    height: 100%; /* Asegura que el SVG ocupe el alto completo del <picture> */
+    pointer-events: none; /* Evita que el SVG interrumpa las interacciones del usuario */
+}
+
+/* sections --------------------------------------------------------------------- */
+#whatwedo {
+    display:flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: white;
+    padding-bottom:;
+}
+
+section {
+    background-color: white;
+}
+
+.section1-layout,
+.section2-layout {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+#productionsservices {
+ display: flex;
+    flex-direction: column; /* Asegura que los elementos internos se organicen verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    margin: 0 auto; /* Centra el contenedor de las secciones */
+    padding: 2.5rem 10rem; /* Puedes ajustar este padding si es necesario */
+}
+
+#projectdevelopmet {
+    padding: 2.5rem 10rem;
+    margin: 0 auto;
+
+}
+
+#productionsservices #services, #projectdevelopmet #projectdev {
+     font-size: calc(1.3rem + 1.2vw); /* La fuente crecerá dinámicamente */
+     margin-bottom: 1.7rem;
+}
+
+#servicesp p, #projectp p {
+    font-size: calc(1rem + .2vw); /* La fuente crecerá dinámicamente */
+    text-align: justify;
+    margin-top: 1rem;
+    line-height: 1.6;             /* Espaciado entre líneas (valores sugeridos: 1.4 - 1.8) */
+    letter-spacing: 0.02em;       /* Espaciado entre letras (valores sugeridos: 0.02em - 0.1em) */
+    word-spacing: 0.05em;         /* Espaciado entre palabras (opcional) */
+}
+
+#productionsservices h2, #projectdevelopmet h2   {
+    margin:2rem 0;
+}
+
+section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra bien el contenedor */
+}
+
+
+.wedothis {
+    text-align: justify; /* Aligns text to both sides */
+    line-height: 1.6; /* Adjusts line spacing for readability */
+    
+}
+
+.wedothis p {
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* #services -------------------------------------------------------------------------------*/
+
+/* Estilo del contenedor del carrusel */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    margin: 0 auto; /* Centra el carrusel */
+
+}
+
+/* Estilo de la zona de deslizamiento */
+.carousel-slide {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* Esto es necesario para que los botones se posicionen sobre la imagen */
+}
+
+/* Estilo para las imágenes del carrusel */
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Para asegurarse de que las imágenes cubren todo el área */
+    flex-shrink: 0; /* Impide que las imágenes se encojan */
+}
+
+/* Estilo de los botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* #projectdev -------------------------------------------------------------------------------- */
+
+#projectdev, #services {
+    line-height:1.5;
+    letter-spacing:0.2em;
+    word-spacing:0;
+    hyphens: auto;
+}
+
+#servicesp p {
+    line-height:1.5;
+    letter-spacing:0.1em;
+    word-spacing:0.1;
+    hyphens: auto;
+    margin-bottom: 1rem;
+}
+
+#servicesp {
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+#projectp p {
+    line-height:1.5;
+    letter-spacing:0.05em;
+    word-spacing:0.1;
+    hyphens: auto;
+} 
+
+#projectp{
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+#projectpimg {
+    width: 50%;
+}
+
+/* Footer ----------------------------------------------------------------------------------- */
+.footer {
+    display: flex; 
+    justify-content: space-evenly;  /* Distribuir el espacio entre los elementos */
+    align-items: center;             /* Alinea los elementos verticalmente al centro */
+    padding:1vw;
+    flex-wrap: wrap;  /* Permite que los elementos se envuelvan cuando el tamaño de la pantalla cambie */
+    border-top: 1px solid black;
+    margin: 0 2vh 1.5vh 2vh;
+    background-color: white;
+}
+
+picture img.hidden {
+        display: none;
+    } /* aqui atribuimos una  clase hidden al footer para esconder el fondo 
+    cuando se ve el footer. No encuentro otra manera de esconder la imagen 
+    de fondo sin afectar al layout que js, css no me lo permite */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Alineación a la izquierda */
+    gap: 0.8rem; /* Espaciado uniforme entre elementos */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    margin: .2rem 0;
+    color: black;
+}
+
+.footer-links.right {
+    align-items: flex-end; /* Alineación a la derecha */
+}
+
+.footer-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem; /* Espaciado uniforme entre elementos */
+}
+
+.footer-icon img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.footer-icon .web {
+    font-size: .6rem;
+}
+
+.footer-links a,
+.footer-links p {
+    margin: 0; /* Quitar márgenes predeterminados */
+    text-align: center; /* Opcional: Centrar el texto */
+}
+
+.footer-icon .web a {
+    text-decoration: none;
+    color: #fff;
+    font-size: .6rem;
+}
+
+.footer-links.right .copy,
+.footer-links.right .copy a {
+    font-size: .6rem;
+}
+
+.footer a:hover {
+    transform: scale(1.10);  /* Un pequeño aumento de tamaño que no afecta el layout en grandes medidas */
+    transition: transform 0.3s ease;
+}
+
+a.email:hover {
+    text-decoration: underline !important;
+}
+
+.footer .phones a {
+    display: inline-block; /* Asegura que transformaciones funcionan */
+}
+
+.footer .phones a:first-child {
+    padding-right: 1rem; /* Ajusta este valor según lo que necesites */
+}
+
+
+/* Responsive Design ------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .menu {
+        display: none;
+  }
+
+  .menu a[href="#wedo"] {
+        display: none !important; /* Oculta el enlace con "We Do" */
+  }
+
+  .navbar .menu a {
+        display: none !important; /* Oculta todos los enlaces de la barra de navegación */
+  }
+
+  .hamburger-icon {
+        display: block; /* Mostrar en versión móvil */
+        position: absolute;
+        top: 46%; /* Centrado verticalmente */
+        right: 2rem; /* Alineado al extremo derecho */
+        transform: translateY(-50%); /* Centrado perfecto */
+        font-size: 1.5rem;
+        margin-right: .6rem;
+        color: white;
+  }
+
+  /* Ajustes adicionales si necesitas modificar el logo o el menú */
+    .logo img {
+        height: calc(15vw + 20px); /* Hace que el logo sea más grande en pantallas pequeñas */
+        max-height: calc(10vw + 9px); /* Ajusta la altura máxima para que sea más grande */
+        margin-top: .3rem;
+        margin-left:2rem;
+    }
+    picture img {
+        object-position: 25% 60%; /* Ajusta la posición de la imagen para móviles */
+    }
+
+  /* Mobile Menu ---------------------------------------------------------------------- */
+    #mobilemenu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto fuera de la pantalla */
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
+        width: 100vw; /* Ocupa todo el ancho de la pantalla */
+        background-color: rgba(0, 0, 0, 0.80); /* Fondo negro semitransparente */
+        z-index: 999; /* Siempre encima de otros elementos */
+        transition: right 0.4s ease-in-out; /* Animación de deslizamiento */
+
+    }
+
+    /* Mobile Menu Visible */
+    #mobilemenu.show {
+        right: 0; /* Desliza hacia dentro de la pantalla */
+    }
+
+    /* Close Button */
+    .close-menu {
+        font-size: 2rem;
+        color: white;
+        text-align: right;
+        padding: 1.3rem 2.6rem;
+        cursor: pointer;
+    }
+
+    /* Mobile Menu Content */
+    .mobilemenu-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 3rem); /* Resta espacio para el botón de cerrar */
+        text-align: center;
+    }
+
+    .mobilemenu-content a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin: .5rem 0;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .mobilemenu-content a:hover {
+        color: #f0a500; /* Cambia a un color más llamativo al pasar el cursor */
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu a[href="#wedo"] {
+        display: none; /* Oculta el enlace con "We Do" */
+    }
+
+    .logomovil {
+        display: flex; /* Centra el contenido dentro del contenedor */
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        margin: 0 auto; /* Centra dentro de su contenedor padre */
+    }
+
+    .logomovil img {
+        width: 100px; /* Tamaño específico */
+        height: auto; /* Mantiene las proporciones */
+        max-width: 100%; /* Asegura que no exceda el contenedor */
+    }
+    /* what we do -------------------------------------------------------------------------- */
+    #whatwedo {
+    display: flex;
+    flex-direction: column;
+    }
+
+    #productionsservices, #projectdevelopmet {
+    padding:2%;
+    }
+
+    .section1-layout {
+      display:flex;
+      flex-direction: column;
+      margin:0;
+      pading:0;
+    }
+
+    #servicesp {
+        order: 1; /* Primero */
+        padding: 0 1rem;
+        hyphens: auto;
+        margin: 0;
+        width: 90%;
+
+    }
+    
+    /* Estilo del contenedor del carrusel en móviles */
+    .carousel-container {
+        width: 100%; /* Ajustar el ancho al 90% en pantallas pequeñas */
+        margin: 0;
+        padding: 0;
+        order: 2; /* Segundo */
+    }
+
+    /* Estilo de las imágenes dentro del carrusel en móviles */
+    .carousel-slide img {
+        width: 100%; /* Las imágenes siguen ocupando el 100% del contenedor */
+        margin: 0;
+        padding: 0;
+    }
+
+    .section2-layout {
+      display: flex;
+      flex-direction: column;
+      
+      align-items: center; /* Centra horizontalmente los hijos */
+      justify-content: center; /* Centra verticalmente los hijos */
+      text-align: center; /* Alinea texto en el centro */
+    
+    }
+
+    #projectp {
+      order: 1; /* Primero */
+      hyphens: auto;
+      text-align: left; /* Alinea el texto */
+      max-width: 100%; /* Asegura que no exceda su contenedor */
+      padding: 0 1rem;
+      width: 90%;
+    }
+
+
+    #projectpimg {
+      order: 2;
+      width: 100%;
+      margin: 0 auto; /* Centra la imagen */
+      display: block; /* Asegura que no cause saltos */
+    }
+
+    #productionsservices h2, #projectdevelopmet h2   {
+    font-size: 1.8rem;
+    margin:2rem 0 1rem 0;
+    }
+
+    /* footer ------------------------------------------------------------------------- */
+    .footer {
+        display: flex;
+        flex-direction: column; /* Cambia la disposición a vertical */
+        justify-content: center; /* Centrar los bloques */
+        align-items: flex-end; /* Asegura que todo esté centrado */
+        margin: 1.5vh 2vh 0 2vh;
+        padding: 2vh;
+        height: auto; /* Permite ajuste dinámico en móviles */
+        border-top: 1px solid black;
+    }
+
+    picture img.hidden {
+        display: none;
+    } /* aqui atribuimos una  clase hidden al footer para esconder el fondo 
+    cuando se ve el footer. No encuentro otra manera de esconder la imagen 
+    de fondo sin afectar al layout que js, css no me lo permite */
+
+    .footer-links a, p {
+        
+        font-size: 0.8rem; 
+        text-align: right; 
+        padding: 0;
+        
+    }
+
+    .footer-icon img {
+        width: 2.2rem;
+        height: auto;
+        padding:.5rem .2rem 0 0;
+        margin:0;
+    }
+
+    .footer, .copy {
+        font-size: .5rem;
+    }
+
+    .footer-links.right, .footer-links.left  {
+        align-items: flex-end;
+    }
+
+    .footer .phones a:first-child {
+    padding-right: .5rem; /* Ajusta este valor según lo que necesites */
+    }
+}

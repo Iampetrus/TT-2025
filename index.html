@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TT 2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuente de Google Fonts: Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Fuente de Google Fonts: Jost (Para encabezados) -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Video Section with Header -->
+        <section class="video-container">
+            <header class="navbar">
+
+                <div class="logo">
+                    <img src="graphics/tulips-rood-totaal-clean-1024x269.png" alt="Logo">
+                </div>
+
+                <ul class="menu">
+                    <li class="nav-item"><a href="#wedo" onclick="redirectToPage('wedo.html')">We Do</a></li>
+                    <li class="nav-item"><a href="#work" onclick="redirectToPage('work.html')">Work</a></li>
+                    <li class="nav-item"><a href="#news" onclick="redirectToPage('news.html')">News</a></li>
+                    <li class="nav-item"><a href="#about" onclick="redirectToPage('about.html')">About</a></li>
+                </ul>
+
+                <!-- Icono de Hamburguesa -->
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa de Font Awesome -->
+                </div>
+
+            </header>
+
+            <video src="reel/TT-landing.mp4" autoplay muted loop></video>
+
+            <div id="mobilemenu">
+                <div class="close-menu" onclick="toggleMenu()">✖</div>
+                <div class="mobilemenu-content">
+                    <div  class="logomovil">
+                        <a href="#home" onclick="redirectToPage('index.html')">
+                            <img src="graphics/tulips - rood beeld clean.png" alt="Logo">
+                        </a>
+                    </div>
+                    <a href="#wedo" onclick="redirectToPage('wedo.html')">We Do</a>
+                    <a href="#work" onclick="redirectToPage('news.html')">Work</a>
+                    <a href="#news" onclick="redirectToPage('news.html')">News</a>
+                    <a href="#about" onclick="redirectToPage('about.html')">About</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <div class="footer-links left">
+                <a class="emailTT" href="mailto:projects@thetulipsproductions.com">projects@thetulipsproductions.com</a>
+                <div class="phones">
+                    <a class="tlf" href="tel:+34 697 444 535">ES +34 697 444 535</a>
+                    <a class="tlff" href="tel:+34 950 642 866">ES +34 950 642 866</a>
+                </div>
+            </div>
+
+            <div class="footer-icon">
+                <a class="ig" href="https://www.instagram.com/thetulipsproductions/" target="_blank">
+                    <img src="graphics/vecteezy_instagram-logo-png-instagram-icon-transparent_18930460.png" alt="Instagram Icon" class="instagram-icon">
+                </a>
+            </div>
+
+            <div class="footer-links right">
+                <a class="map" href="https://www.google.com/maps/place/The+Tulips+Productions/@37.0513155,-2.3931703,17z/data=!4m14!1m7!3m6!1s0xd7aa796cfd9edf3:0x665965036b7c7b38!2sThe+Tulips+Productions!8m2!3d37.0513155!4d-2.3905954!16s%2Fg%2F11wx1hjr9n!3m5!1s0xd7aa796cfd9edf3:0x665965036b7c7b38!8m2!3d37.0513155!4d-2.3905954!16s%2Fg%2F11wx1hjr9n?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">We are in Tabernas, Almeria. Find us in Maps</a>
+                
+                <p class="copy">
+                    <span>© 2025 The Tulips Productions / web by 
+                        <a class="email" href="mailto:pedroagustinlecumberri@gmail.com">Petrus</a>
+                    </span>
+                </p>
+            </div>
+
+        </footer>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
