@@ -8,6 +8,10 @@ html, body {
     overscroll-behavior-y: none; /* Evita rebote al final del scroll */
 }
 
+html {
+    font-size: 16px; /* Tamaño base estándar */
+}
+
 /* tipografia --------------------------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
@@ -146,76 +150,57 @@ picture svg {
 
 /* sections --------------------------------------------------------------------- */
 #whatwedo {
-    display:flex;
-    flex-direction: column;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center;
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
     background-color: white;
-    padding-bottom:;
-}
-
-section {
-    background-color: white;
-}
-
-.section1-layout,
-.section2-layout {
     display: flex;
     flex-direction: column;
-    
-    
 }
 
 #productionsservices {
- display: flex;
-    flex-direction: column; /* Asegura que los elementos internos se organicen verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    margin: 0 auto; /* Centra el contenedor de las secciones */
-    padding: 2.5rem 10rem; /* Puedes ajustar este padding si es necesario */
-}
-
-#projectdevelopmet {
-    padding: 2.5rem 10rem;
+    max-width: 900px;
     margin: 0 auto;
-
 }
 
-#productionsservices #services, #projectdevelopmet #projectdev {
-     font-size: calc(1.3rem + 1.2vw); /* La fuente crecerá dinámicamente */
-     margin-bottom: 1.7rem;
+#projectdevelopment {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
 }
 
-#servicesp p, #projectp p {
-    font-size: calc(1rem + .2vw); /* La fuente crecerá dinámicamente */
-    text-align: justify;
-    margin-top: 1rem;
-    line-height: 1.6;             /* Espaciado entre líneas (valores sugeridos: 1.4 - 1.8) */
-    letter-spacing: 0.02em;       /* Espaciado entre letras (valores sugeridos: 0.02em - 0.1em) */
-    word-spacing: 0.05em;         /* Espaciado entre palabras (opcional) */
+.section1-layout {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: left;
 }
 
-#productionsservices h2, #projectdevelopmet h2   {
-    margin:2rem 0;
-}
+.section2-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-section img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Asegura que la imagen cubra bien el contenedor */
-}
-
-
-.wedothis {
-    text-align: justify; /* Aligns text to both sides */
-    line-height: 1.6; /* Adjusts line spacing for readability */
+    width: 100%; /* Permitir que el contenedor ocupe el espacio necesario */
+    max-width: 900px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor */
+    text-align: left;
     
 }
 
-.wedothis p {
-    margin-bottom: 15px; /* Space between paragraphs */
+#projectpimg {
+    border: 2px solid yellow;
+}
+
+#projectpimg img {
+    width: 100%;       /* La imagen ocupa todo el ancho del contenedor */
+    height: auto;      /* Mantener la relación de aspecto */
+    max-width: 100%;   /* Evitar que la imagen exceda el contenedor */
+    object-fit: contain; /* Mostrar la imagen completa sin recortes */
+    display: block;    /* Asegura que se trate como un elemento de bloque */
+    margin: 0 auto;    /* Centrar la imagen */
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* #services -------------------------------------------------------------------------------*/
@@ -224,9 +209,7 @@ section img {
 .carousel-container {
     overflow: hidden;
     position: relative;
-    width: 50%;
-    margin: 0 auto; /* Centra el carrusel */
-
+    width: 100%;
 }
 
 /* Estilo de la zona de deslizamiento */
@@ -270,43 +253,19 @@ section img {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* #projectdev -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
 
-#projectdev, #services {
-    line-height:1.5;
-    letter-spacing:0.2em;
-    word-spacing:0;
-    hyphens: auto;
+#servicesp p, #projectp p {
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    text-align: left;
+
+    padding: 0 1.5rem;
+
 }
 
-#servicesp p {
-    line-height:1.5;
-    letter-spacing:0.1em;
-    word-spacing:0.1;
-    hyphens: auto;
-    margin-bottom: 1rem;
-}
-
-#servicesp {
-    width: 80%;
-    margin-bottom: 2rem;
-}
-
-#projectp p {
-    line-height:1.5;
-    letter-spacing:0.05em;
-    word-spacing:0.1;
-    hyphens: auto;
-} 
-
-#projectp{
-    width: 80%;
-    margin-bottom: 2rem;
-}
-
-#projectpimg {
-    width: 50%;
-}
 
 /* Footer ----------------------------------------------------------------------------------- */
 .footer {
@@ -433,7 +392,7 @@ a.email:hover {
         object-position: 25% 60%; /* Ajusta la posición de la imagen para móviles */
     }
 
-  /* Mobile Menu ---------------------------------------------------------------------- */
+/* Mobile Menu ---------------------------------------------------------------------- */
     #mobilemenu {
         display: block;
         position: fixed;
@@ -506,13 +465,14 @@ a.email:hover {
         height: auto; /* Mantiene las proporciones */
         max-width: 100%; /* Asegura que no exceda el contenedor */
     }
-    /* what we do -------------------------------------------------------------------------- */
+
+/* what we do -------------------------------------------------------------------------- */
     #whatwedo {
     display: flex;
     flex-direction: column;
     }
 
-    #productionsservices, #projectdevelopmet {
+    #productionsservices, #projectdevelopment {
     padding:2%;
     }
 
@@ -525,11 +485,10 @@ a.email:hover {
 
     #servicesp {
         order: 1; /* Primero */
-        padding: 0 1rem;
+        padding: 0;
         hyphens: auto;
         margin: 0;
-        width: 90%;
-
+        width: 100%;
     }
     
     /* Estilo del contenedor del carrusel en móviles */
@@ -554,7 +513,6 @@ a.email:hover {
       align-items: center; /* Centra horizontalmente los hijos */
       justify-content: center; /* Centra verticalmente los hijos */
       text-align: center; /* Alinea texto en el centro */
-    
     }
 
     #projectp {
@@ -563,9 +521,8 @@ a.email:hover {
       text-align: left; /* Alinea el texto */
       max-width: 100%; /* Asegura que no exceda su contenedor */
       padding: 0 1rem;
-      width: 90%;
+      width: 100%;
     }
-
 
     #projectpimg {
       order: 2;
@@ -574,10 +531,17 @@ a.email:hover {
       display: block; /* Asegura que no cause saltos */
     }
 
-    #productionsservices h2, #projectdevelopmet h2   {
-    font-size: 1.8rem;
-    margin:2rem 0 1rem 0;
+    #productionsservices h2, #projectdevelopment h2  {
+        font-size: 1.8rem;
+        margin:2rem 0 1rem 0;
+        padding: 0 .5rem;
     }
+
+    #servicesp p, #projectp p {
+        padding: 0 1rem;
+        text-align: justify;
+
+}
 
     /* footer ------------------------------------------------------------------------- */
     .footer {
