@@ -149,52 +149,55 @@ picture svg {
 
 /* sections --------------------------------------------------------------------- */
 .noticias {
-    display: flex;
-    justify-content: center; /* Centra el contenedor */
-    background-color: white;
-    padding: 1rem 0;
-}
-
-.grid-container {
-    display: flex;
-    flex-direction: column; /* Columnar para <h2>, imagen y texto */
-    align-items: center; /* Centra todos los elementos horizontalmente */
-    max-width: 60%; /* Controla el ancho máximo */
-    width: 100%;
-    margin: 0 auto; /* Centra el contenedor */
-    padding: 1.9rem 4rem;
     background-color: white;
 }
-
-.grid-h2 {
-    align-self: center; 
-    line-height:1.5;
-    letter-spacing:0.1em;
-    word-spacing:0;
-    hyphens: auto;
-    font-size: calc(1.1rem + 1.2vw); /* La fuente crecerá dinámicamente */
-    width: 50%;
+#projectdevelopment {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.8rem 0;
 }
 
-.grid-photo-container img {
+.section2-layout {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    width: 50%;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%; /* Permitir que el contenedor ocupe el espacio necesario */
+    max-width: 900px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor */
+    text-align: left;
+}
+
+#projectpimg a img {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
 }
 
-
-.grid-text {
-    width: 70%;
+#projectp p {
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    text-align: left;
+    padding: 0 1.5rem;
 }
 
-.grid-text, p {
-    line-height:1.5;
-    letter-spacing:0.1em;
-    word-spacing:0.1;
-    hyphens: auto;
+#projectp {
     margin-bottom: 1rem;
-    font-size: calc(1rem + .2vw); 
+}
+
+/* Contenedor principal */
+#mainpicture-container {
+  width: 100%;
+  height: 100vh; /* Ocupa el alto del viewport */
+  background-color: black; /* Fondo negro para el contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra la imagen */
+  overflow: hidden; /* Evita desbordamientos */
+  position: relative; /* Necesario para el posicionamiento absoluto de las imágenes */
 }
 
 /* news ----------------------------------------------------------------------- */
@@ -336,7 +339,10 @@ a.email:hover {
         background-color: rgba(0, 0, 0, 0.80); /* Fondo negro semitransparente */
         z-index: 999; /* Siempre encima de otros elementos */
         transition: right 0.4s ease-in-out; /* Animación de deslizamiento */
+    }
 
+    picture img {
+        object-position: 60% 80%; /* Ajusta la posición de la imagen para móviles */
     }
 
     /* Mobile Menu Visible */
@@ -399,64 +405,21 @@ a.email:hover {
         max-width: 100%; /* Asegura que no exceda el contenedor */
     }
     /* news --------------------------------------------------------------------- */
+    #projectdev {
+        font-size: 1.75rem;
+        margin:.6rem 1rem 1rem 1rem;
+    }
 
-.noticias {
-    display: flex;
-    justify-content: center; /* Centra el contenedor */
-    background-color: white;
-    padding:0;
-    margin: 0;
-}
+    #projectpimg a img {
+        width: 96%;
+    }
 
-.grid-container {
-    display: flex;
-    flex-direction: column; /* Columnar para <h2>, imagen y texto */
-    align-items: center; /* Centra todos los elementos horizontalmente */
-    max-width: 100%; /* Controla el ancho máximo */
-    width: 100%;
-    margin: 0 auto; /* Centra el contenedor */
-    padding:2vw;
-    background-color: white;
-}
+    #projectp p {
+        text-align: justify;
+        hyphens: auto;
+    }
 
-.grid-h2 {
-    align-self: center; 
-    line-height:1.5;
-    letter-spacing:0.1em;
-    word-spacing:0;
-    hyphens: auto;
-    font-size: 1.5rem;
-    width: 100%;
-    margin: 2.2rem 1rem 1.4rem 3.1rem;
     
-}
-
-.grid-photo-container img {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    width: 100%;
-    margin: 0 auto .8rem auto;
-}
-
-
-.grid-text {
-    width: 90%;
-
-}
-
-.grid-text p {
-    font-size: calc(1rem + .2vw);
-    text-align: justify;
-    margin: 0;
-    padding: 0;
-    line-height:1.6;
-    letter-spacing:0.02em;
-    word-spacing:0.05;
-    hyphens: auto;
-    
-}
-    
-
     /* footer ------------------------------------------------------------------------- */
     .footer {
         display: flex;

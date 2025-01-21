@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,700");
 
 html, body {
-    max-width: 1910px; /* Limitar el ancho máximo de todo el layout */
+    max-width: 1910px; 
     margin: 0 auto;
-    overflow-x: hidden; /* Esto evita que haya desplazamiento hacia la derecha */
-    width: 100%;
-    overscroll-behavior-y: none; /* Evita rebote al final del scroll */
+    overflow-x: hidden; 
+    overscroll-behavior-y: none; /* rebote al final del scroll */
 }
 
 /* tipografia --------------------------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Futura PT', sans-serif; /* Usar Futura PT para los encabezados */
+    font-family: 'Futura PT', sans-serif; 
 }
 
 body, p, li, a {
@@ -33,7 +32,6 @@ h3 {
     font-weight: 400;
 }
 
-/* Estilo de texto normal */
 p, li, a {
     font-size: 1rem;
     font-weight: 300;
@@ -41,7 +39,6 @@ p, li, a {
 
 /* navbar-------------------------------------------------------------- */
 
-/* Navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -54,20 +51,18 @@ p, li, a {
   padding: 1.5rem 0rem;
 
   z-index: 10;
-  background-color: transparent; /* Navbar transparente inicial */
-  transition: background-color 0.6s ease; /* Transición suave al cambiar color */
+  background-color: transparent; 
+  transition: background-color 0.6s ease;
 }
 
 .logo img {
-    height: calc(10vw + 10px); /* Ajusta el tamaño proporcionalmente */
-    width: auto;
+    height: calc(10vw + 10px); 
     max-height: calc(4.5vw + 12px);
     margin-left: 3rem;
 }
 
-/* Estilo cuando el navbar se oscurece */
 .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.2); /* Un fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.2); 
 }
 
 .navbar ul {
@@ -90,7 +85,7 @@ p, li, a {
 }
 
 .hamburger-icon {
-    display: none; /* Ocultar por defecto */
+    display: none;
     cursor: pointer;
 }
 
@@ -113,11 +108,11 @@ svg {
 }
 
 picture {
-    display: block; /* Asegura que el elemento ocupe su propio bloque */
-    width: 100%; /* La imagen se adaptará al ancho de la ventana */
-    height: 100vh; /* La altura máxima será igual al viewport */
-    position: relative; /* Necesario para posicionar correctamente los elementos internos */
-    overflow: hidden; /* Evita que el contenido desborde los límites */
+    display: block; 
+    width: 100%; 
+    height: 100vh; 
+    position: relative; 
+    overflow: hidden; 
 }
 
 picture img {
@@ -128,56 +123,49 @@ picture img {
   height: 100%;
   z-index: -1;
 
-  object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
-  object-position: center; /* Centra la imagen si se recorta */
-  max-width: 1910px; /* Requiere cambiar a su vez el max-width de html, body*/
+  object-fit: cover; 
+  object-position: center; 
+  max-width: 1910px; 
   margin: 0 auto;
-  max-height: 100vh; /* Evita que la imagen supere el alto del viewport */
+  max-height: 100vh; 
 
   object-position: 0% 10%;
-
 }
 
 picture svg {
-    position: absolute; /* Asegura que el SVG esté en la misma posición que la imagen */
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%; /* Adapta el SVG al ancho del <picture> */
-    height: 100%; /* Asegura que el SVG ocupe el alto completo del <picture> */
-    pointer-events: none; /* Evita que el SVG interrumpa las interacciones del usuario */
+    width: 100%; 
+    height: 100%; 
+    pointer-events: none; 
 }
 
 picture img {
     opacity: .8;
 }
 
-
-
-
-
-
-
 /* sections --------------------------------------------------------------------- */
 .aboutus {
     height: 1000px;
     background-color: white;
 }
-/* news ----------------------------------------------------------------------- */
+
 
 /* Footer ----------------------------------------------------------------------------------- */
 .footer {
     display: flex; 
-    justify-content: space-evenly;  /* Distribuir el espacio entre los elementos */
-    align-items: center;             /* Alinea los elementos verticalmente al centro */
+    justify-content: space-evenly; 
+    align-items: center;             
     padding:1vw;
-    flex-wrap: wrap;  /* Permite que los elementos se envuelvan cuando el tamaño de la pantalla cambie */
+    flex-wrap: wrap;  
     border-top: 1px solid black;
     margin: 0 2vh 1.5vh 2vh;
     background-color: white;
 }
 
 picture img.hidden {
-        display: none;
+    display: none;
     } /* aqui atribuimos una  clase hidden al footer para esconder el fondo 
     cuando se ve el footer. No encuentro otra manera de esconder la imagen 
     de fondo sin afectar al layout que js, css no me lo permite */
@@ -186,8 +174,8 @@ picture img.hidden {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Alineación a la izquierda */
-    gap: 0.8rem; /* Espaciado uniforme entre elementos */
+    align-items: flex-start;
+    gap: 0.8rem; 
 }
 
 .footer-links a {
@@ -199,14 +187,14 @@ picture img.hidden {
 }
 
 .footer-links.right {
-    align-items: flex-end; /* Alineación a la derecha */
+    align-items: flex-end; 
 }
 
 .footer-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem; /* Espaciado uniforme entre elementos */
+    gap: 0.8rem;
 }
 
 .footer-icon img {
@@ -220,9 +208,8 @@ picture img.hidden {
 
 .footer-links a,
 .footer-links p {
-    margin: 0; /* Quitar márgenes predeterminados */
-    text-align: center; /* Opcional: Centrar el texto */
-}
+    margin: 0; 
+    text-align: center; 
 
 .footer-icon .web a {
     text-decoration: none;
@@ -236,7 +223,7 @@ picture img.hidden {
 }
 
 .footer a:hover {
-    transform: scale(1.10);  /* Un pequeño aumento de tamaño que no afecta el layout en grandes medidas */
+    transform: scale(1.10); 
     transition: transform 0.3s ease;
 }
 
@@ -245,11 +232,11 @@ a.email:hover {
 }
 
 .footer .phones a {
-    display: inline-block; /* Asegura que transformaciones funcionan */
+    display: inline-block; 
 }
 
 .footer .phones a:first-child {
-    padding-right: 1rem; /* Ajusta este valor según lo que necesites */
+    padding-right: 1rem; 
 }
 /* Responsive Design ------------------------------------------------------------- 
 ------------------------------------------------------------------------------------ */
@@ -259,33 +246,31 @@ a.email:hover {
   }
 
   .menu a[href="#wedo"] {
-        display: none !important; /* Oculta el enlace con "We Do" */
+        display: none !important;
   }
 
   .navbar .menu a {
-        display: none !important; /* Oculta todos los enlaces de la barra de navegación */
+        display: none !important; 
   }
 
   .hamburger-icon {
-        display: block; /* Mostrar en versión móvil */
+        display: block; 
         position: absolute;
-        top: 46%; /* Centrado verticalmente */
-        right: 2rem; /* Alineado al extremo derecho */
-        transform: translateY(-50%); /* Centrado perfecto */
+        top: 46%; 
+        right: 2rem; 
+        transform: translateY(-50%); 
         font-size: 1.5rem;
         margin-right: .6rem;
         color: white;
   }
-
-  /* Ajustes adicionales si necesitas modificar el logo o el menú */
     .logo img {
-        height: calc(15vw + 20px); /* Hace que el logo sea más grande en pantallas pequeñas */
-        max-height: calc(10vw + 9px); /* Ajusta la altura máxima para que sea más grande */
+        height: calc(15vw + 20px); 
+        max-height: calc(10vw + 9px);
         margin-top: .3rem;
         margin-left:2rem;
     }
     picture img {
-        object-position: 25% 60%; /* Ajusta la posición de la imagen para móviles */
+        object-position: 25% 60%;
     }
 
   /* Mobile Menu ---------------------------------------------------------------------- */
@@ -293,13 +278,12 @@ a.email:hover {
         display: block;
         position: fixed;
         top: 0;
-        right: -100%; /* Oculto fuera de la pantalla */
-        height: 100vh; /* Ocupa toda la altura de la pantalla */
-        width: 100vw; /* Ocupa todo el ancho de la pantalla */
-        background-color: rgba(0, 0, 0, 0.80); /* Fondo negro semitransparente */
-        z-index: 999; /* Siempre encima de otros elementos */
-        transition: right 0.4s ease-in-out; /* Animación de deslizamiento */
-
+        right: -100%;
+        height: 100vh; 
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.80); 
+        z-index: 999; 
+        transition: right 0.4s ease-in-out;
     }
 
     /* Mobile Menu Visible */
@@ -307,7 +291,7 @@ a.email:hover {
         right: 0; /* Desliza hacia dentro de la pantalla */
     }
 
-    /* Close Button */
+    
     .close-menu {
         font-size: 2rem;
         color: white;
@@ -322,7 +306,7 @@ a.email:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 3rem); /* Resta espacio para el botón de cerrar */
+        height: calc(100vh - 3rem); 
         text-align: center;
     }
 
@@ -337,7 +321,7 @@ a.email:hover {
     }
 
     .mobilemenu-content a:hover {
-        color: #f0a500; /* Cambia a un color más llamativo al pasar el cursor */
+        color: #f0a500; 
     }
 
     .menu {
@@ -345,90 +329,85 @@ a.email:hover {
     }
 
     .menu a[href="#wedo"] {
-        display: none; /* Oculta el enlace con "We Do" */
+        display: none; 
     }
 
     .logomovil {
-        display: flex; /* Centra el contenido dentro del contenedor */
+        display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%; /* Ocupa todo el ancho del contenedor */
-        margin: 0 auto; /* Centra dentro de su contenedor padre */
+        width: 100%; 
+        margin: 0 auto; 
     }
 
     .logomovil img {
-        width: 100px; /* Tamaño específico */
-        height: auto; /* Mantiene las proporciones */
-        max-width: 100%; /* Asegura que no exceda el contenedor */
+        width: 100px; 
+        height: auto; 
+        max-width: 100%;
     }
     /* news --------------------------------------------------------------------- */
 
-.noticias {
-    display: flex;
-    justify-content: center; /* Centra el contenedor */
-    background-color: white;
-    padding:0;
-    margin: 0;
-}
+    .noticias {
+        display: flex;
+        justify-content: center; 
+        background-color: white;
+        padding:0;
+        margin: 0;
+    }
 
-.grid-container {
-    display: flex;
-    flex-direction: column; /* Columnar para <h2>, imagen y texto */
-    align-items: center; /* Centra todos los elementos horizontalmente */
-    max-width: 100%; /* Controla el ancho máximo */
-    width: 100%;
-    margin: 0 auto; /* Centra el contenedor */
-    padding:2vw;
-    background-color: white;
-}
+    .grid-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        max-width: 100%; 
+        width: 100%;
+        margin: 0 auto; 
+        padding:2vw;
+        background-color: white;
+    }
 
-.grid-h2 {
-    align-self: center; 
-    line-height:1.5;
-    letter-spacing:0.1em;
-    word-spacing:0;
-    hyphens: auto;
-    font-size: 1.5rem;
-    width: 100%;
-    margin: 2.2rem 1rem 1.4rem 3.1rem;
-    
-}
+    .grid-h2 {
+        align-self: center; 
+        line-height:1.5;
+        letter-spacing:0.1em;
+        word-spacing:0;
+        hyphens: auto;
+        font-size: 1.5rem;
+        width: 100%;
+        margin: 2.2rem 1rem 1.4rem 3.1rem;
+    }
 
-.grid-photo-container img {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    width: 100%;
-    margin: 0 auto .8rem auto;
-}
+    .grid-photo-container img {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto .8rem auto;
+    }
 
 
-.grid-text {
-    width: 90%;
+    .grid-text {
+        width: 90%;
+    }
 
-}
-
-.grid-text p {
-    font-size: calc(1rem + .2vw);
-    text-align: justify;
-    margin: 0;
-    padding: 0;
-    line-height:1.6;
-    letter-spacing:0.02em;
-    word-spacing:0.05;
-    hyphens: auto;
-    
-}
-    
-
+    .grid-text p {
+        font-size: calc(1rem + .2vw);
+        text-align: justify;
+        margin: 0;
+        padding: 0;
+        line-height:1.6;
+        letter-spacing:0.02em;
+        word-spacing:0.05;
+        hyphens: auto;
+    }
+        
     /* footer ------------------------------------------------------------------------- */
     .footer {
         display: flex;
-        flex-direction: column; /* Cambia la disposición a vertical */
-        justify-content: center; /* Centrar los bloques */
-        align-items: flex-end; /* Asegura que todo esté centrado */
+        flex-direction: column; 
+        justify-content: center;
+        align-items: flex-end; 
         margin: 1.5vh 2vh 0 2vh;
         padding: 2vh;
-        height: auto; /* Permite ajuste dinámico en móviles */
+        height: auto; 
         border-top: 1.5px solid black;
     }
 
@@ -439,11 +418,9 @@ a.email:hover {
     de fondo sin afectar al layout que js, css no me lo permite */
 
     .footer-links a, p {
-        
         font-size: 0.8rem; 
         text-align: right; 
         padding: 0;
-        
     }
 
     .footer-icon img {
@@ -462,6 +439,6 @@ a.email:hover {
     }
 
     .footer .phones a:first-child {
-    padding-right: .5rem; /* Ajusta este valor según lo que necesites */
+    padding-right: .5rem; 
     }
 }

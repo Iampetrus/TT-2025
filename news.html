@@ -13,6 +13,13 @@
     <!-- Font Awesome para íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <!-- Fuente de Google Fonts: Spectral (Para encabezados) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
 
@@ -44,7 +51,7 @@
                 <div class="mobilemenu-content">
                     <div  class="logomovil">
                         <a href="#home" onclick="redirectToPage('index.html')">
-                            <img src="graphics/tulips - rood beeld clean.png" alt="Logo">
+                            <img src="graphics/tulips_white_outline.png" alt="Logo">
                         </a>
                     </div>
                     <a href="#wedo" onclick="redirectToPage('wedo.html')">WeDo</a>
@@ -63,7 +70,7 @@
         - black indicates fully transparent
         - white indicates fully opaque
       -->
-      <img id="mainpicture" src="tests/_DSC0016.JPG" alt="">
+      <img id="mainpicture" src="tests/_DSC0016.jpeg" alt="">
 
       <svg width="100%" height="100">
         <defs>
@@ -90,37 +97,36 @@
       </svg> <!-- masked-rect es una funcion JS para poder cambiar de mascara cuando mobil. CSS  o me permite hacerlo no se por que, me ha hecho perder mucho tiempo-->
 
     </picture>
+    <div class="noticias">
+        <section id="projectdevelopment">
+            <div class="section2-layout">
+                <!-- Texto descriptivo -->
 
-    <section class="noticias">
-    <div class="grid-container">
-        <h2 class="grid-h2">Honorable Mention for our short 'Domino'</h2>
+                <div class="body-text" id="projectp">
+                    <h2 class="title" id="projectdev">Honorable Mention for our short 'Domino'</h2>
+                    <p>We are pleased to share that our short film 'Domino' received a Honourable Mention at <a class="LAFandD" href="https://bestfilmawards.com/winners/best-documentary-award">Los Angeles Film & Documentary Awards.</a> </p>
+                    <p>This short film was developed by The Tulips Productions in collaboration with director duo Larsen & Pickstock and shot in Almeria desert in late 2023. </p>
+                    <p>Producer: Karin S. de Boer</p>
+                    <p>Starring: Tony Corvillo</p>
+                    <p>Directors: Nikolaj Larsen & Duncan Pickstock</p>
+                    <p>Director of Photography: Paul Bessa</p>
+                    <p>Sound Recordist: Curro Burguillo</p>
+                    <p>Composer: Xavier Capellas</p>
+                    <p>Thanks to the wonderful crew from Almeria and the municipality of Tabernas. </p>
+                    <p>In the near future Tony traffics European migrants who seek a better life in Rhea – a private city state for the super rich in tempered sub-Saharian highlands. When he is forced by his furious boss to go back into the desert to look for a migrant he has abandoned, his life begins to unravel.</p>
+                    <p>Full cast and crew on <a href="https://www.imdb.com/title/tt27730080/?ref_=tt_rvi_tt_i_4">IMDB</a>. Watch the trailer below</p> 
+                </div>
 
-        <div class="grid-photo-container">
-            <a href="https://player.vimeo.com/video/930583970?h=d9eb7b2d0b&title=0&autopause=0&app_id=122963">
-                <img src="picturesOfProjects/domino/MV5BYjhkODcwM2MtYzVkMy00Y2QwLTgxMGItMjQyMjE2YjE0NDZmXkEyXkFqcGc@._V1_.jpg" class="grid-photo">
-            </a>
-        </div>
-
-        <div class="grid-text">
-            <p>We are pleased to share that our short film 'Domino' received a Honourable Mention at <a class="LAFandD" href="https://bestfilmawards.com/winners/best-documentary-award">Los Angeles Film & Documentary Awards.</a> </p>
-            <p>This short film was developed by The Tulips Productions in collaboration with director duo Larsen & Pickstock and shot in Almeria desert in late 2023. </p>
-            <p>Producer: Karin S. de Boer</p>
-            <p>Starring: Tony Corvillo</p>
-            <p>Directors: Nikolaj Larsen & Duncan Pickstock</p>
-            <p>Director of Photography: Paul Bessa</p>
-            <p>Sound Recordist: Curro Burguillo</p>
-            <p>Composer: Xavier Capellas</p>
-            <p>Thanks to the wonderful crew from Almeria and the municipality of Tabernas. </p>
-            <br>
-            <p>In the near future Tony traffics European migrants who seek a better life in Rhea – a private city state for the super rich in tempered sub-Saharian highlands. When he is forced by his furious boss to go back into the desert to look for a migrant he has abandoned, his life begins to unravel.</p>
-            <br>
-            <p>Full cast and crew on <a href="https://www.imdb.com/title/tt27730080/?ref_=tt_rvi_tt_i_4">IMDB</a></p> 
-        </div>
+                <!-- Imagen del proyecto -->
+                <div id="projectpimg">
+                    <a href="https://player.vimeo.com/video/930583970?h=d9eb7b2d0b&title=0&autopause=0&app_id=122963">
+                    <img src="picturesOfProjects/domino/MV5BYjhkODcwM2MtYzVkMy00Y2QwLTgxMGItMjQyMjE2YjE0NDZmXkEyXkFqcGc@._V1_.jpg" class="grid-photo">
+                </a>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
-
-   
-
+    
     <div>
     <footer class="footer">
 
@@ -169,7 +175,6 @@
           resizeTimeout = setTimeout(toggleMask, 200); // Evitar múltiples ejecuciones rápidas
         });
 
-
 // la funcion de abajo permite tener un fondo blanco cuando movil. El efecto svg no me permite tenerlo y no se hacerlo via css
         window.addEventListener("scroll", function() {
             const footer = document.querySelector(".footer");
@@ -181,7 +186,28 @@
             } else {
                 picture.classList.remove("hidden");
             }
-});
+        });
+
+// funcion para cambiar las fotos de news cada 'x'  segundos. Sin transicion
+        document.addEventListener("DOMContentLoaded", () => {
+          const images = [
+            "tests/_DSC0016.jpeg",
+            "tests/mvOQTEor.jpeg",
+            "tests/fR43Pi8O.jpeg",
+          ];
+
+          const mainPicture = document.getElementById("mainpicture");
+          let currentIndex = 0; // Índice de la imagen actual
+
+          // Función para cambiar la imagen
+          function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Cambia al siguiente índice
+            mainPicture.src = images[currentIndex]; // Actualiza la imagen
+          }
+
+          // Cambia la imagen cada 5 segundos (5000 ms)
+          setInterval(changeImage,8000);
+        });
 
 
     </script>

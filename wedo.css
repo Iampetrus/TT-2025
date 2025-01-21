@@ -183,11 +183,10 @@ picture svg {
     max-width: 900px; /* Limitar el ancho máximo */
     margin: 0 auto; /* Centrar el contenedor */
     text-align: left;
-    
 }
 
 #projectpimg {
-    border: 2px solid yellow;
+    width: 80%;
 }
 
 #projectpimg img {
@@ -209,7 +208,7 @@ picture svg {
 .carousel-container {
     overflow: hidden;
     position: relative;
-    width: 100%;
+    width: 80%;
 }
 
 /* Estilo de la zona de deslizamiento */
@@ -261,11 +260,12 @@ picture svg {
     font-style: normal;
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     text-align: left;
-
-    padding: 0 1.5rem;
-
+    padding: 0 1.5rem
 }
 
+#servicesp, #projectp {
+    margin-bottom: 1rem;
+}
 
 /* Footer ----------------------------------------------------------------------------------- */
 .footer {
@@ -540,8 +540,7 @@ a.email:hover {
     #servicesp p, #projectp p {
         padding: 0 1rem;
         text-align: justify;
-
-}
+    }
 
     /* footer ------------------------------------------------------------------------- */
     .footer {
