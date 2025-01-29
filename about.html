@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TT 2025</title>
     <link rel="stylesheet" href="about.css">
+
     <!-- Fuente de Google Fonts: Nunito -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -13,6 +14,10 @@
     <!-- Font Awesome para íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <!-- Fuente de Google Fonts: Spectral -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
 </head>
 
@@ -30,7 +35,7 @@
             <li class="nav-item"><a href="#wedo" onclick="redirectToPage('wedo.html')">We Do</a></li>
             <li class="nav-item"><a href="#work" onclick="redirectToPage('work.html')">Work</a></li>
             <li class="nav-item"><a href="#news" onclick="redirectToPage('news.html')">News</a></li>
-            <li class="nav-item"><a href="#about" style="color: red;" onclick="redirectToPage('about.html')">About</a></li>
+            <li class="nav-item"><a href="#about" style="color: #5D5E61;" onclick="redirectToPage('about.html')">About</a></li>
 
         </ul>
 
@@ -58,45 +63,95 @@
 
     <picture>
 
-      <!--
-        luminance mask:
-        - black indicates fully transparent
-        - white indicates fully opaque
-      -->
       <img id="mainpicture" src="stills/7SnZcjII.jpeg" alt="">
 
       <svg width="100%" height="100">
         <defs>
           <linearGradient id="gradient" gradientTransform="rotate(75)">
-            <stop offset="15%" stop-color="#FFFFFF" />
+            <stop offset="15%" stop-color="#BF571F" />
             <stop offset="80%" stop-color="#FFFFFF" />
           </linearGradient>
           
           <mask id="mask">
-            <rect width="100%" height="100%" fill="black" />
-            <text class="wd" x="40%" y="38%" font-size="3vw" font-weight="300" fill="white">About</text>
-            <text class="services" x="40%" y="60%" font-size="11vw" letter-spacing="10" fill="white">Us</text>
+            <rect width="100%" height="100%" fill="#fff" />
+            <text class="services" x="55%" y="45%" font-size="3vw" font-weight="300">About</text>
+            <text class="services" x="55%" y="65%" font-size="11vw" letter-spacing="10">Us</text>
           </mask>
 
           <mask id="mask2">
-            <rect width="100%" height="100%" fill="black" />
-            <text class="wd" x="9%" y="60%" font-size="6vw" font-weight="300" fill="white">About</text>
-            <text class="services" x="7%" y="70%" font-size="20vw" font-weight="500" letter-spacing="8" fill="white">Us</text>
+            <rect width="100%" height="100%" fill="#fff" />
+            <text class="services" x="23.5%" y="68%" font-size="6vw" font-weight="300" >About</text>
+            <text class="services" x="22%" y="77%" font-size="20vw" font-weight="500" letter-spacing="8">Us</text>
           </mask>
 
         </defs>
 
-        <rect id="masked-rect" width="100%" height="100%" fill="url(#gradient)" mask="url(#mask)" />
-      </svg> <!-- masked-rect es una funcion JS para poder cambiar de mascara cuando mobil. CSS  o me permite hacerlo no se por que, me ha hecho perder mucho tiempo-->
+        <rect id="masked-rect" width="100%" height="100%" fill="url(#gradient)" fill-opacity="0.50" mask="url(#mask)" />
+      </svg>
 
     </picture>
 
     <section class="aboutus">
-        <div class="content"></div>
+        <div class="grid-container">
+            <header class="header">
+                <h1 class="ps">Production Services,</h1>
+                <h1 class="pd">Project Development</h1>
+                <h1 class="cp">& Co - Productions</h1>
+                <h1>
+                    in<span id="country-dynamic">Spain</span>
+                </h1>
+                
+            </header>
+
+            <div class="credits-about">
+                <div class="section all-films">
+                    <ul>
+                        <li>2025 - 2012</li>
+                        <li>The Boer Whore -<span class="media"> Feature Film</span></li>
+                        <li>The Principle -<span class="media"></span></li>
+                        <li>Where the Black Sand Burns -<span class="media"> Short</span></li>
+                        <li>Domino -<span class="media"> Short</span></li>
+                        <li>Leaf -<span class="media"> Short</span></li>
+                        <li>Odyssey -<span class="media"> Short</span></li>
+                        <li>The Chapel -<span class="media"> Feature Film</span></li>
+                        <li>The Alabanian Virgin -<span class="media"></span></li>
+                        <li>Help, I Shrunk My Friends -<span class="media"> TV Series</span></li>
+                        <li>Punt Uit Schluss Aus Full Stop -<span class="media"></span></li>
+                        <li>Four Enchanted Sisters -<span class="media"></span> TV PG</li>
+                        <li>Immenhof, Das Abenteuer Eines Sommers -<span class="media"> Feature Film</span></li>
+                        <li>Neverlanding: A Bad Thriller -<span class="media"> Short</span></li>
+                        <li>Sum of Stories -<span class="media"> Feature Film</span></li>
+                        <li>Eisenstein in Guanajuato -<span class="media"> Feature Film</span></li>
+                        <li>Where The Road Runs Out -<span class="media"> Feature Film</span></li>
+                        <li>Cub -<span class="media"> Feature Film</span></li>
+                        <li>Mocro Maffia -<span class="media"></span></li>
+                        <li>Hidden Assets -<span class="media"> TV Series</span></li>
+                        <li>Cold Courage -<span class="media"> TV Series</span></li>
+                        <li>Puppy Patrol -<span class="media"> TV Series</span></li>
+                        <li>Brussel -<span class="media"> TV Series</span></li>
+                        <li>Trollie -<span class="media"> TV Series</span></li>
+                        <li>The Spiral -<span class="media"> TV Series</span></li>
+                        <li>Bardsongs -<span class="media"> Feature Film</span></li>
+                        <li>Nadine -<span class="media"> Feature Film</span></li>
+                        <li>P.O.V -<span class="media"> Non-fiction TV Series</span></li>
+                        <li>Lomax The Songhunter -<span class="media"> Feature Film</span></li>
+                        <li>Resistance -<span class="media"> Feature Film</span></li>
+                    </ul>
+                </div>
+
+                <div class="section bio">
+                    <p>Production Services, Project Development and Co-Productions in the film industry are fundamentally teamwork-driven endeavors where the synergy of forces brings creative visions to life.</p>
+                    <p>I am Karin S. de Boer, and I bring an expertise to rely on for logistical precision, resource optimization and a collaborative approach empowering creative expression. It's been years that I have been navigating the complexities of multi-national productions, honning the ability to bridge cultural nuances, adapt to diverse workflows and ensure that no matter how small the detail, it supports the bigger picture whether it's assembling the right crew, scouting the perfect location or managing timelines and budgets without compromise.
+                    </p>
+                    <img class="karin" src="tests/Karin.jpeg">
+                    <p>
+                    I am based in the rugged and cinematic landscapes of southern Spain, Tabernas, where the echoes of foundational Western films still linger in the air. Such a backdrop continues the legacy of cinematic storytelling while expanding into new and diverse genres. From the dusty trails immortalized in Sergio Leone’s films to modern productions seeking an unparalleled blend of history and authenticity, I network with worldwide experienced crews where the past meets the future. And we bring stories to life, weaving the timeless artistry of film with the energy of new ideas which, is how we start 2025. By releasing shot projects to the world.</p>
+                </div>
+            </div>
+        
+        </div>
     
     </section>
-
-   
 
     <div>
     <footer class="footer">
@@ -112,6 +167,9 @@
             <div class="footer-icon">
                 <a class="ig" href="https://www.instagram.com/thetulipsproductions/" target="_blank">
                     <img src="graphics/vecteezy_instagram-logo-png-instagram-icon-transparent_18930460.png" alt="Instagram Icon" class="instagram-icon">
+                </a>
+                <a class="imdb" href="https://www.imdb.com/name/nm0207492/?ref_=fn_all_nme_1" target="_blank">
+                    <img src="graphics/05dc775f10b2293fd00db89c73d32726.png" alt="Instagram Icon" class="imdb-icon">
                 </a>
             </div>
 
@@ -130,7 +188,7 @@
     <script src="script.js"></script>
     <script>
         
-// la funcion de abajo cambia la mascara despendiendo de si esta en movil o no. No supe hacerlo via css.
+// la funcion de abajo cambia la mascara despendiendo de si esta en movil o no. No supe hacerlo via css y dejaba un fondo que no quiero
         function toggleMask() {
           const rectElement = document.getElementById('masked-rect');
           if (!rectElement) return; // Salimos si el elemento no existe
@@ -146,7 +204,6 @@
           resizeTimeout = setTimeout(toggleMask, 200); // Evitar múltiples ejecuciones rápidas
         });
 
-
 // la funcion de abajo permite tener un fondo blanco cuando movil. El efecto svg no me permite tenerlo y no se hacerlo via css
         window.addEventListener("scroll", function() {
             const footer = document.querySelector(".footer");
@@ -158,8 +215,76 @@
             } else {
                 picture.classList.remove("hidden");
             }
-});
+        });
 
+// Alternancia paises dinamico 
+        const countries = [
+            "Belgium", 
+            "Spain", 
+            "the Netherlands", 
+            "Germany", 
+            "South Africa", 
+            "Mexico", 
+            "France", 
+            "Austria", 
+            "Italy", 
+            "Finland", 
+            "Ireland", 
+            "Canada", 
+            "the United States", 
+            "Sweden", 
+            "Norway", 
+            "Denmark"
+        ];
+
+        // Obtenemos el span donde cambiaremos el país
+        const countryDynamic = document.getElementById("country-dynamic");
+
+        // Inicializamos un índice
+        let index = 0;
+
+        // Función para actualizar el país
+        function updateCountry() {
+            // Transición visual (opcional)
+            countryDynamic.style.opacity = 0; // Desvanece el texto
+            setTimeout(() => {
+                // Cambia el contenido del span
+                countryDynamic.innerHTML = `&nbsp;${countries[index]}`;
+                countryDynamic.style.opacity = 1; // Reaparece el texto
+                index = (index + 1) % countries.length; // Incrementa índice circularmente
+            }, 0); // Tiempo de desvanecimiento (coincide con la transición en CSS)
+        }
+
+        // Llamar a la función cada 3 segundos
+        setInterval(updateCountry,1000);
+
+        // Inicializamos con el primer país
+        updateCountry();
+
+//funcion para descubrir la imagen proporcionalmente cuando scroll 
+        window.addEventListener("scroll", () => {
+          const svg = document.querySelector("svg"); // Tu máscara <svg>
+          const aboutUs = document.querySelector(".aboutus");
+          const windowHeight = window.innerHeight;
+          const scrollY = window.scrollY;
+
+          const revealThreshold = windowHeight * 0.9; // 70% de la altura de la ventana
+
+          if (scrollY < revealThreshold) {
+            // Mover la máscara hacia arriba proporcionalmente al scroll
+            svg.style.transform = `translateY(-${scrollY}px)`;
+            svg.style.opacity = "1"; // Asegurarnos de que la máscara sea visible al principio
+          } else if (scrollY >= revealThreshold && !svg.classList.contains("hidden")) {
+            // Cuando se supera el umbral del 70%, ocultamos la máscara y dejamos ver el contenido
+            svg.style.transform = `translateY(-100%)`;
+            svg.style.opacity = "0";
+            svg.classList.add("hidden");
+
+            // Mostrar la sección de contenido, asegurándonos de que está visible
+            aboutUs.style.opacity = "1";
+            aboutUs.style.transform = "translateY(0)";
+          }
+        });
 
     </script>
 
