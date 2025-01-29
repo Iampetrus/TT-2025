@@ -99,7 +99,7 @@ p, li, a {
 }
 
 .navbar ul li a:hover {
-  color: #346A44;
+  color: #5D5E61;
 }
 
 #mobilemenu {
@@ -264,9 +264,8 @@ picture img.hidden {
 
 .footer-icon {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.8rem; /* Espaciado uniforme entre elementos */
+    gap: 1rem; /* Espaciado uniforme entre elementos */
 }
 
 .footer-icon img {
@@ -294,6 +293,21 @@ picture img.hidden {
 .footer-links.right .copy a {
     font-size: .6rem;
 }
+
+.copy a {
+    animation: colorChange 1.5s infinite; /* Duración de la animación y bucle infinito */
+    text-decoration: none; /* Opcional: elimina el subrayado */
+    font-weight:;
+  }
+
+  @keyframes colorChange {
+    0% { color: #2C3E50; }   /* Azul oscuro */
+    20% { color: #34495E; }  /* Gris azulado */
+    40% { color: #7F8C8D; }  /* Gris piedra */
+    60% { color: #95A5A6; }  /* Gris plata */
+    80% { color: #BDC3C7; }  /* Gris claro */
+    100% { color: #2C3E50; } /* Vuelve al azul oscuro */
+  }
 
 .footer a:hover {
     transform: scale(1.10);  /* Un pequeño aumento de tamaño que no afecta el layout en grandes medidas */
@@ -450,7 +464,7 @@ a.email:hover {
     }
 
     .jobswedo .title {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         margin: 2.3rem 1rem 1.4rem 1rem;
         font-weight: 500;
     }
@@ -477,7 +491,10 @@ a.email:hover {
         font-size: 0.8rem; 
         text-align: right; 
         padding: 0;
-        
+    }
+
+    .footer-icon {
+    gap: .3rem; /* Espaciado uniforme entre elementos */
     }
 
     .footer-icon img {

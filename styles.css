@@ -62,6 +62,21 @@ p, li, a {
     font-weight: 300;
 }
 
+ .copy a {
+    animation: colorChange 1.5s infinite; /* Duración de la animación y bucle infinito */
+    text-decoration: none; /* Opcional: elimina el subrayado */
+    font-weight:;
+  }
+
+  @keyframes colorChange {
+    0% { color: #2C3E50; }   /* Azul oscuro */
+    20% { color: #34495E; }  /* Gris azulado */
+    40% { color: #7F8C8D; }  /* Gris piedra */
+    60% { color: #95A5A6; }  /* Gris plata */
+    80% { color: #BDC3C7; }  /* Gris claro */
+    100% { color: #2C3E50; } /* Vuelve al azul oscuro */
+  }
+
 /* Navbar superpuesto sobre el video --------------------------------------------------- */
 .video-container {
     position: relative;
@@ -136,7 +151,7 @@ p, li, a {
 }
 
 .navbar ul li a:hover {
-  color: #346A44;
+  color: #5D5E61;
 }
 
 /* Footer -----------------------------------------------------------------*/
@@ -178,7 +193,7 @@ p, li, a {
 
 .footer-icon {
     display: flex;
-    flex-direction: column;
+    
     align-items: center;
     gap: 0.8rem; /* Espaciado uniforme entre elementos */
 }

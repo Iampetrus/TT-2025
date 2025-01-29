@@ -43,6 +43,26 @@ p, li, a {
     font-weight: 300;
 }
 
+ #servicesp p:first-of-type::first-letter {
+        font-family: 'Jost', sans-serif; /* Consistent font */
+        font-size: 5.5rem;
+        font-weight: ;
+        float: left; 
+        line-height: 3;
+        color: black;
+        margin: .4rem .3rem 0 0;
+}
+
+#projectp p:first-of-type::first-letter {
+        font-family: 'Jost', sans-serif; /* Consistent font */
+        font-size: 5.5rem;
+        font-weight:;
+        float: left; 
+        line-height: 3;
+        color: black;
+        margin: .4rem .3rem 0 0;
+}
+
 /* navbar-------------------------------------------------------------- */
 
 /* Navbar styles */
@@ -103,7 +123,7 @@ p, li, a {
 }
 
 .navbar ul li a:hover {
-  color: #346A44;
+  color: #5D5E61;
 }
 
 #mobilemenu {
@@ -307,9 +327,9 @@ picture img.hidden {
 
 .footer-icon {
     display: flex;
-    flex-direction: column;
+    
     align-items: center;
-    gap: 0.8rem; /* Espaciado uniforme entre elementos */
+    gap: 1rem; /* Espaciado uniforme entre elementos */
 }
 
 .footer-icon img {
@@ -338,6 +358,21 @@ picture img.hidden {
     font-size: .6rem;
 }
 
+.copy a {
+    animation: colorChange 1.5s infinite; /* Duración de la animación y bucle infinito */
+    text-decoration: none; /* Opcional: elimina el subrayado */
+    font-weight:;
+  }
+
+  @keyframes colorChange {
+    0% { color: #2C3E50; }   /* Azul oscuro */
+    20% { color: #34495E; }  /* Gris azulado */
+    40% { color: #7F8C8D; }  /* Gris piedra */
+    60% { color: #95A5A6; }  /* Gris plata */
+    80% { color: #BDC3C7; }  /* Gris claro */
+    100% { color: #2C3E50; } /* Vuelve al azul oscuro */
+  }
+
 .footer a:hover {
     transform: scale(1.10);  /* Un pequeño aumento de tamaño que no afecta el layout en grandes medidas */
     transition: transform 0.3s ease;
@@ -354,7 +389,6 @@ a.email:hover {
 .footer .phones a:first-child {
     padding-right: 1rem; /* Ajusta este valor según lo que necesites */
 }
-
 
 /* Responsive Design ------------------------------------------------------------- */
 @media (max-width: 768px) {
@@ -426,7 +460,7 @@ a.email:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 3rem); /* Resta espacio para el botón de cerrar */
+        height: calc(100vh - 3rem); 
         text-align: center;
     }
 
@@ -441,7 +475,7 @@ a.email:hover {
     }
 
     .mobilemenu-content a:hover {
-        color: #f0a500; /* Cambia a un color más llamativo al pasar el cursor */
+        color: #f0a500; 
     }
 
     .menu {
@@ -532,8 +566,8 @@ a.email:hover {
     }
 
     #productionsservices h2, #projectdevelopment h2  {
-        font-size: 1.8rem;
-        margin:2rem 0 1rem 0;
+        font-size: 2.1rem;
+        margin:2.6rem 0 1rem .5rem;
         padding: 0 .5rem;
     }
 
@@ -565,7 +599,10 @@ a.email:hover {
         font-size: 0.8rem; 
         text-align: right; 
         padding: 0;
-        
+    }
+
+    .footer-icon {
+    gap: .3rem; /* Espaciado uniforme entre elementos */
     }
 
     .footer-icon img {
@@ -584,6 +621,6 @@ a.email:hover {
     }
 
     .footer .phones a:first-child {
-    padding-right: .5rem; /* Ajusta este valor según lo que necesites */
+    padding-right: .5rem; 
     }
 }

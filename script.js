@@ -24,8 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             } else {
                 console.log("Navbar no encontrado");
-            }
-
-            
+            } 
 });
+
 

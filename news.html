@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TT 2025</title>
     <link rel="stylesheet" href="news.css">
+
     <!-- Fuente de Google Fonts: Nunito -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -13,7 +14,7 @@
     <!-- Font Awesome para íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <!-- Fuente de Google Fonts: Spectral (Para encabezados) -->
+    <!-- Fuente de Google Fonts: Spectral -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -36,7 +37,7 @@
         <ul class="menu">
             <li class="nav-item"><a href="#wedo" onclick="redirectToPage('wedo.html')">We Do</a></li>
             <li class="nav-item"><a href="#work" onclick="redirectToPage('work.html')">Work</a></li>
-            <li class="nav-item"><a href="#news" style="color: red;" onclick="redirectToPage('news.html')">News</a></li>
+            <li class="nav-item"><a href="#news" style="color: #5D5E61;" onclick="redirectToPage('news.html')">News</a></li>
             <li class="nav-item"><a href="#about" onclick="redirectToPage('about.html')">About</a></li>
 
         </ul>
@@ -55,8 +56,8 @@
                         </a>
                     </div>
                     <a href="#wedo" onclick="redirectToPage('wedo.html')">WeDo</a>
-                    <a href="#work" onclick="redirectToPage('news.html')">Work</a>
-                    <a href="#news" style="color: red;" onclick="redirectToPage('news.html')">News</a>
+                    <a href="#work" onclick="redirectToPage('work.html')">Work</a>
+                    <a href="#news" style="color: #5D5E61;" onclick="redirectToPage('news.html')">News</a>
                     <a href="#about" onclick="redirectToPage('about.html')">About</a>
                 </div>
         </div>
@@ -97,21 +98,26 @@
       </svg> <!-- masked-rect es una funcion JS para poder cambiar de mascara cuando mobil. CSS  o me permite hacerlo no se por que, me ha hecho perder mucho tiempo-->
 
     </picture>
+
     <div class="noticias">
         <section id="projectdevelopment">
             <div class="section2-layout">
                 <!-- Texto descriptivo -->
 
                 <div class="body-text" id="projectp">
+                    
+                    <img class="logonews" src="graphics/tulips - rood beeld clean.png" alt="Logo" style="width: 8%; height: auto;">
+                    <h2 class="subsection" style="font-family: 'Futura PT', sans-serif; font-weight: 100; font-size: 2rem; color: grey">Awards</h2>
+
                     <h2 class="title" id="projectdev">Honorable Mention for our short 'Domino'</h2>
                     <p>We are pleased to share that our short film 'Domino' received a Honourable Mention at <a class="LAFandD" href="https://bestfilmawards.com/winners/best-documentary-award">Los Angeles Film & Documentary Awards.</a> </p>
                     <p>This short film was developed by The Tulips Productions in collaboration with director duo Larsen & Pickstock and shot in Almeria desert in late 2023. </p>
-                    <p>Producer: Karin S. de Boer</p>
-                    <p>Starring: Tony Corvillo</p>
-                    <p>Directors: Nikolaj Larsen & Duncan Pickstock</p>
-                    <p>Director of Photography: Paul Bessa</p>
-                    <p>Sound Recordist: Curro Burguillo</p>
-                    <p>Composer: Xavier Capellas</p>
+                    <p><span style="font-weight: bold;">Producer</span>: Karin S. de Boer</p>
+                    <p><span style="font-weight: bold;">Starring</span>: Tony Corvillo</p>
+                    <p><span style="font-weight: bold;">Directors</span>: Nikolaj Larsen & Duncan Pickstock</p>
+                    <p><span style="font-weight: bold;">Director of Photography</span>: Paul Bessa</p>
+                    <p><span style="font-weight: bold;">Sound Recordist</span>: Curro Burguillo</p>
+                    <p><span style="font-weight: bold;">Composer</span>: Xavier Capellas</p>
                     <p>Thanks to the wonderful crew from Almeria and the municipality of Tabernas. </p>
                     <p>In the near future Tony traffics European migrants who seek a better life in Rhea – a private city state for the super rich in tempered sub-Saharian highlands. When he is forced by his furious boss to go back into the desert to look for a migrant he has abandoned, his life begins to unravel.</p>
                     <p>Full cast and crew on <a href="https://www.imdb.com/title/tt27730080/?ref_=tt_rvi_tt_i_4">IMDB</a>. Watch the trailer below</p> 
@@ -141,6 +147,9 @@
             <div class="footer-icon">
                 <a class="ig" href="https://www.instagram.com/thetulipsproductions/" target="_blank">
                     <img src="graphics/vecteezy_instagram-logo-png-instagram-icon-transparent_18930460.png" alt="Instagram Icon" class="instagram-icon">
+                </a>
+                <a class="imdb" href="https://www.imdb.com/name/nm0207492/?ref_=fn_all_nme_1" target="_blank">
+                    <img src="graphics/05dc775f10b2293fd00db89c73d32726.png" alt="Instagram Icon" class="imdb-icon">
                 </a>
             </div>
 
@@ -193,7 +202,7 @@
           const images = [
             "tests/_DSC0016.jpeg",
             "tests/mvOQTEor.jpeg",
-            "tests/fR43Pi8O.jpeg",
+            "tests/IMG_0466 copy.jpeg"
           ];
 
           const mainPicture = document.getElementById("mainpicture");
