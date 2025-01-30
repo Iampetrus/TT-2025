@@ -9,7 +9,8 @@
 
 /* Prevenir el desplazamiento y el rebote en la página */
 html, body {
-    overflow: hidden; /* Desactiva el desplazamiento */
+    overflow-x: hidden; /* Solo oculta el desplazamiento horizontal */
+    overflow-y: auto; /* Permite desplazamiento vertical */
 
 }
 
