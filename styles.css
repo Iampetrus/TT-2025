@@ -34,33 +34,8 @@ body {
 
 /* tipografia --------------------------------------------------------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Futura PT', sans-serif; /* Usar Futura PT para los encabezados */
-}
-
 body, p, li, a {
     font-family: "Oswald", sans-serif;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 600;
-}
-
-h2 {
-    font-size: 2.5rem;
-    font-weight: 500;
-}
-
-h3 {
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-/* Estilo de texto normal */
-p, li, a {
-    font-size: 1rem;
-    font-weight: 300;
 }
 
  .copy a {
@@ -135,9 +110,8 @@ p, li, a {
 .navbar ul li a {
   text-decoration: none;
   color: white;
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  font-size: 1.4rem;
+  font-weight: 300;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   padding-left: 3rem;
   transition: color 0.3s;
 }
@@ -175,15 +149,9 @@ p, li, a {
     gap: 0.8rem; /* Espaciado uniforme entre elementos */
 }
 
-.footer-links.left {
-    
-}
-
-
 .footer-links a {
     text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
+    font-size: clamp(.9rem, 1vw, .9rem);
     margin: .2rem 0;
     color: black;
 }
@@ -194,9 +162,8 @@ p, li, a {
 
 .footer-icon {
     display: flex;
-    
     align-items: center;
-    gap: 0.8rem; /* Espaciado uniforme entre elementos */
+    gap: 1.6rem; /* Espaciado uniforme entre elementos */
 }
 
 .footer-icon img {
@@ -216,13 +183,7 @@ p, li, a {
 
 .footer-icon .web a {
     text-decoration: none;
-    color: #fff;
-    font-size: .6rem;
-}
 
-.footer-links.right .copy,
-.footer-links.right .copy a {
-    font-size: .6rem;
 }
 
 .footer a:hover {
@@ -238,8 +199,40 @@ p, li, a {
     padding-right: 1rem; /* Ajusta este valor según lo que necesites */
 }
 
+.footer-links.right .copy {
+    font-size: clamp(.4rem, .6vw, .7rem);
+    font-weight: 300;
+}
+
+.copy .email {
+    font-size:clamp(.5rem, .6vw, .7rem);
+}
+
+.footer-links.right a,
+.footer-links.left a {
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
 a.email:hover {
     text-decoration: underline !important;
+}
+.footercenter {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1seo a {
+    text-decoration: none;
+    color:black;
+}
+
+#h1seo {
+    font-size: clamp(1.4rem, 1.8vw, 2.2rem);
+    margin: 0 0 1rem 0;
+    font-weight:400;
+    letter-spacing: 0.05em;
 }
 
 /* Responsive Design ------------------------------------------------------------- */
@@ -283,8 +276,13 @@ a.email:hover {
         top: 50%; /* Centrado verticalmente */
         right: 2rem; /* Alineado al extremo derecho */
         transform: translateY(-50%); /* Centrado perfecto */
-        font-size: 1.5rem;
-        margin-right: .6rem;
+        font-size: 1rem;
+        padding: .5rem .4rem 0 0;
+    }
+
+    .hamburger-icon img {
+        width: 25px; /* Ajusta según el tamaño que necesites */
+        height: auto;
     }
 
     /* Ajustes adicionales si necesitas modificar el logo o el menú */
@@ -406,7 +404,44 @@ a.email:hover {
     .footer .phones a:first-child {
     padding-right: .5rem; /* Ajusta este valor según lo que necesites */
     }
+
+    .footer-links.left, .footercenter, .footer-links.right {
+    display: contents;
+    }
+
+    .footer-links.left .emailTT {
+        padding: 0 0 .5rem 0;
+    }
+
+    .footer-links.left .phones {
+        padding: 0 0 .3rem 0;
+    }
+
+    .footer-icon {
+        padding: 0 0 .4rem 0;
+    }
+
+    .footer-links.right .map {
+        padding: 0 0 .5rem 0;
+    }
+
+    .footer-links.right .copy {
+        font-size: .5rem;
+    }
+
+
+    /* Ahora, asignas order a los elementos hijos directos del footer */
+    #h1seo { order: 1; }
+    .emailTT { order: 2; }
+    .phones { order: 3; }
+    .map { order: 5; }
+    .footer-icon { order: 4; }
+    .copy {order: 6;}
 }
+
+
+
+
 
 
 

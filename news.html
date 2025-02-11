@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Updates about our work. The Tulips</title>
+    <title>Updates about our film production work. The Tulips</title>
 
     <meta name="description" content="The Tulips Productions' latest news about recent projects and collaborations.">
 
@@ -17,6 +17,8 @@
     <!-- Font Awesome para íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <link rel="icon" href="favicon.ico" type="image/ico">
+
     <!-- Fuente de Google Fonts: Spectral -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +27,21 @@
     <!-- Font Awesome para íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X83XBTG8X2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X83XBTG8X2');
+    </script>
+
 </head>
 
 <body>
+
+    <h1 class="hidden-h1">News about our projects in the world</h1>
 
     <header class="navbar">
 
@@ -45,9 +59,9 @@
 
         </ul>
 
-                <!-- Icono de Hamburguesa -->
+        <!-- Icono de Hamburguesa -->
         <div class="hamburger-icon" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa de Font Awesome -->
+            <img src="graphics/menu-hamburguer.png" alt="Menú">
         </div>
 
         <div id="mobilemenu">
@@ -85,7 +99,7 @@
           
           <mask id="mask">
             <rect width="100%" height="100%" fill="#fff" />
-            <text class="wd" x="11%" y="38%" font-size="3vw" font-weight="300">What</text>
+            <text x="11%" y="38%" font-size="3vw" font-weight="300">What</text>
             <text class="services" x="11%" y="60%" font-size="11vw" letter-spacing="10">Are we up to</text>
           </mask>
 
@@ -109,12 +123,12 @@
 
                 <div class="body-text" id="projectp">
                     
-                    <img class="logonews" src="graphics/tulips - rood beeld clean.png" alt="Logo" style="width: 8%; height: auto;">
+                    <img class="logonews" src="graphics/tulips-rood-beeld-clean.png" alt="Logo" style="width: 8%; height: auto;">
                     <h2 class="subsection" style="font-family: 'Futura PT', sans-serif; font-weight: 100; font-size: 2rem; color: grey">Awards</h2>
 
                     <h2 class="title" id="projectdev">Honorable Mention for our short 'Domino'</h2>
                     <p>We are pleased to share that our short film 'Domino' received a Honourable Mention at <a class="LAFandD" href="https://bestfilmawards.com/winners/best-documentary-award">Los Angeles Film & Documentary Awards.</a> </p>
-                    <p>This short film was developed by The Tulips Productions in collaboration with director duo Larsen & Pickstock and shot in Almeria desert in late 2023. </p>
+                    <p>This short film was <a class="wd" href="wedo.html"> produced</a> by The Tulips Productions in collaboration with director duo Larsen & Pickstock and shot in Almeria desert in late 2023. </p>
                     <p><span style="font-weight: bold;">Producer</span>: Karin S. de Boer</p>
                     <p><span style="font-weight: bold;">Starring</span>: Tony Corvillo</p>
                     <p><span style="font-weight: bold;">Directors</span>: Nikolaj Larsen & Duncan Pickstock</p>
@@ -148,6 +162,9 @@
             </div>
 
             <div class="footer-icon">
+                <a class="TT" href="about.html">
+                    <img src="graphics/tulips-rood-beeld-clean.png">
+                </a>
                 <a class="ig" href="https://www.instagram.com/thetulipsproductions/" target="_blank">
                     <img src="graphics/vecteezy_instagram-logo-png-instagram-icon-transparent_18930460.png" alt="Instagram Icon" class="instagram-icon">
                 </a>
@@ -161,7 +178,7 @@
                 
                 <p class="copy">
                     <span>© 2025 The Tulips Productions / web by 
-                        <a class="email" href="mailto:pedroagustinlecumberri@gmail.com">Petrus</a>
+                        <a class="email" href="mailto:pedroalerri@yahoo.es">Petrus</a>
                     </span>
                 </p>
             </div>
@@ -204,8 +221,10 @@
         document.addEventListener("DOMContentLoaded", () => {
           const images = [
             "tests/malaherrera.jpg",
+            "tests/wheretheroadrunsout.jpeg",
             "tests/mvOQTEor.jpeg",
             "tests/IMG_0466 copy.jpeg"
+
           ];
 
           const mainPicture = document.getElementById("mainpicture");

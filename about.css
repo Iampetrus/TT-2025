@@ -41,8 +41,16 @@ p, li, a {
 
 #mask text {
     font-family: "Oswald", sans-serif;
-
 } 
+
+.hidden-h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
 
 /* navbar-------------------------------------------------------------- */
 
@@ -159,33 +167,19 @@ picture img {
 /* sections --------------------------------------------------------------------- */
 .aboutus {
     background-color: white;
+    margin: 0 auto;
+}
+
+.grid-container {
+
 }
 
 /* Base styles */
 body {
-    
     margin: 0;
     padding: 0;
     color: #000;
     background-color: #fff;
-}
-
-h1, h2 {
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
 }
 
 .section.all-films li {
@@ -193,7 +187,6 @@ h2 {
     font-weight: 300;
     font-style: normal;
     font-size: clamp(1rem, 1.5vw, 1.2rem);
-    text-align: left;
     padding: 0 1.5rem;
 }
 
@@ -208,22 +201,36 @@ h2 {
 }
 
 /* Grid layout --------------------------------------------------------------------------------------------------------------------------- */
-.grid-container {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    width: 80%;
+.header {
+    width: 58%;
     margin: 0 auto;
-    padding: 20px;
+    display:block;
 }
 
-.header {
-    grid-column: span 3;
-    text-align: center;
+.h1-styled {
+    font-size: clamp(1.4rem, 2.1vw, 2.5rem);
+    font-weight: 400;
+}
+
+.meet {
+    display: block;
+    padding: 0 0 1rem 0;
+}
+
+.services {
+
+}
+
+.header span {
+    
 }
 
 #country-dynamic {
     color: black; /* Color para destacar */
     transition: opacity 0s ease; /* Transición suave en cambios */
+    font-size: clamp(1.4rem, 2.1vw, 2.5rem);
+    font-weight: 500;
+    text-align: right;
 }
 
 .section {
@@ -291,24 +298,14 @@ a:hover {
     display: flex; /* Mantener flex para diseño flexible */
     flex-direction: column; /* Apilar <h1> arriba */
     gap: 20px; /* Espaciado entre elementos */
-    width: 80%;
     margin: 0 auto;
-    padding:4rem 0 0 0;
-}
-
-.grid-container header h1{
-    width:100%; /* Ajusta al contenido real */
-    display: flex;
-    justify-content: flex-start;
-    font-weight: 400;
-    margin: 0 0 0 9.8rem;
-    padding: 0 0 0 9.8rem;
+    padding: 2rem 0 0 0;
 }
 
 .credits-about {
     display: flex; /* Coloca las dos secciones en fila */
     flex-direction: row; /* Aquí forzamos el layout horizontal */
-    width: 90%; /* Asegura que ocupe el ancho total */
+    width: 55%; /* Asegura que ocupe el ancho total */
     margin: 0 auto;
 }
 
@@ -363,7 +360,7 @@ picture img.hidden {
 .footer-icon {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Espaciado uniforme entre elementos */
+    gap: 1.6rem; /* Espaciado uniforme entre elementos */
 }
 
 .footer-icon img {
@@ -379,6 +376,12 @@ picture img.hidden {
 .footer-links p {
     margin: 0; /* Quitar márgenes predeterminados */
     text-align: center; /* Opcional: Centrar el texto */
+}
+
+.footer-links.right a,
+.footer-links.left a {
+    font-weight: normal;
+    letter-spacing: 0.02em;
 }
 
 .footer-icon .web a {
@@ -426,6 +429,22 @@ a.email:hover {
 
 /* Responsive Design ------------------------------------------------------------------------------------------------------------------------------------------------ */
 @media (max-width: 768px) {
+
+.h1-styled .services {
+    font-size: 1.7rem;
+    margin: 0;
+    padding:0;
+}
+
+.meet {
+    font-size:1.7rem;
+    padding: 0;
+}
+
+#country-dynamic {
+    display: block;
+}
+
   .menu {
         display: none;
   }
@@ -441,13 +460,17 @@ a.email:hover {
   .hamburger-icon {
         display: block; /* Mostrar en versión móvil */
         position: absolute;
-        top: 46%; /* Centrado verticalmente */
+        top: 50%; /* Centrado verticalmente */
         right: 2rem; /* Alineado al extremo derecho */
         transform: translateY(-50%); /* Centrado perfecto */
-        font-size: 1.5rem;
-        margin-right: .6rem;
-        color: white;
-  }
+        font-size: 1rem;
+        padding: 0 .4rem 0 0;
+    }
+
+.hamburger-icon img {
+        width: 25px; /* Ajusta según el tamaño que necesites */
+        height: auto;
+    }
 
   /* Ajustes adicionales si necesitas modificar el logo o el menú */
     .logo img {
@@ -630,6 +653,8 @@ a.email:hover {
       }
 
     /* footer ------------------------------------------------------------------------- */
+    
+
     .footer {
         display: flex;
         flex-direction: column; /* Cambia la disposición a vertical */

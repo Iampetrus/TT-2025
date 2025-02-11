@@ -63,6 +63,15 @@ p, li, a {
         margin: .4rem .3rem 0 0;
 }
 
+.hidden-h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 /* navbar-------------------------------------------------------------- */
 
 /* Navbar styles */
@@ -287,6 +296,18 @@ picture svg {
     margin-bottom: 1rem;
 }
 
+#servicesp a, #projectp a {
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Un color que los diferencie del texto normal */
+    font-weight: bold; /* Un poco más grueso para destacarlo */
+    font-size: 1.1rem;
+}
+
+#servicesp a:hover, #projectp a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+    color: #D86028; /* Un tono más brillante al pasar el ratón */
+}
+
 /* Footer ----------------------------------------------------------------------------------- */
 .footer {
     display: flex; 
@@ -327,9 +348,8 @@ picture img.hidden {
 
 .footer-icon {
     display: flex;
-    
     align-items: center;
-    gap: 1rem; /* Espaciado uniforme entre elementos */
+    gap: 1.6rem; /* Espaciado uniforme entre elementos */
 }
 
 .footer-icon img {
@@ -356,6 +376,12 @@ picture img.hidden {
 .footer-links.right .copy,
 .footer-links.right .copy a {
     font-size: .6rem;
+}
+
+.footer-links.right a,
+.footer-links.left a {
+    font-weight: normal;
+    letter-spacing: 0.02em;
 }
 
 .copy a {
@@ -407,22 +433,27 @@ a.email:hover {
   .hamburger-icon {
         display: block; /* Mostrar en versión móvil */
         position: absolute;
-        top: 46%; /* Centrado verticalmente */
+        top: 50%; /* Centrado verticalmente */
         right: 2rem; /* Alineado al extremo derecho */
         transform: translateY(-50%); /* Centrado perfecto */
-        font-size: 1.5rem;
-        margin-right: .6rem;
-        color: white;
-  }
+        font-size: 1rem;
+        padding: 0 .4rem 0 0;
+    }
+
+.hamburger-icon img {
+        width: 25px; /* Ajusta según el tamaño que necesites */
+        height: auto;
+    }
 
   /* Ajustes adicionales si necesitas modificar el logo o el menú */
-    .logo img {
+.logo img {
         height: calc(15vw + 20px); /* Hace que el logo sea más grande en pantallas pequeñas */
         max-height: calc(10vw + 9px); /* Ajusta la altura máxima para que sea más grande */
         margin-top: .3rem;
         margin-left:2rem;
     }
-    picture img {
+
+picture img {
         object-position: 25% 60%; /* Ajusta la posición de la imagen para móviles */
     }
 

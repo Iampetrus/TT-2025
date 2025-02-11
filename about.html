@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who are we. The Tulips - film production experts</title>
 
-    <meta name="description" content="Learn more about The Tulips Productions, a film production company dedicated to developing and co-producing feature films and commercials.">
+    <meta name="description" content="Learn more about The Tulips, a film production company dedicated to developing and co-producing feature films and commercials.">
 
     <link rel="stylesheet" href="about.css">
 
@@ -17,14 +17,27 @@
     <!-- Font Awesome para íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <link rel="icon" href="favicon.ico" type="image/ico">
+
     <!-- Fuente de Google Fonts: Spectral -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X83XBTG8X2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X83XBTG8X2');
+    </script>
+
 </head>
 
 <body>
+    <h1 class="hidden-h1">Meet The Tulips Productions</h1>
 
     <header class="navbar">
 
@@ -42,9 +55,9 @@
 
         </ul>
 
-                <!-- Icono de Hamburguesa -->
+         <!-- Icono de Hamburguesa -->
         <div class="hamburger-icon" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa de Font Awesome -->
+            <img src="graphics/menu-hamburguer.png" alt="Menú">
         </div>
 
         <div id="mobilemenu">
@@ -96,14 +109,13 @@
 
     <section class="aboutus">
         <div class="grid-container">
+
             <header class="header">
-                <h1 class="ps">Production Services,</h1>
-                <h1 class="pd">Project Development</h1>
-                <h1 class="cp">& Co - Productions</h1>
-                <h1>
-                    in<span id="country-dynamic">Spain</span>
+                <h1 class="h1-styled">
+                    <span class="meet">Meet the Tulips</span>
+                    <span class="services">Film production Services in</span>
+                    <span id="country-dynamic">Spain</span>
                 </h1>
-                
             </header>
 
             <div class="credits-about">
@@ -181,7 +193,7 @@
                 
                 <p class="copy">
                     <span>© 2025 The Tulips Productions / web by 
-                        <a class="email" href="mailto:pedroagustinlecumberri@gmail.com">Petrus</a>
+                        <a class="email" href="mailto:pedroalerri@yahoo.es">Petrus</a>
                     </span>
                 </p>
             </div>
@@ -293,3 +305,6 @@
 
 </body>
 </html>
+
+
+

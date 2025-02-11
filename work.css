@@ -220,9 +220,7 @@ section {
     letter-spacing:0.1em;
     word-spacing:0;
     hyphens: auto;
-
 }
-
 
 /* Footer ----------------------------------------------------------------------------------- */
 .footer {
@@ -265,7 +263,7 @@ picture img.hidden {
 .footer-icon {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Espaciado uniforme entre elementos */
+    gap: 1.6rem; /* Espaciado uniforme entre elementos */
 }
 
 .footer-icon img {
@@ -292,6 +290,12 @@ picture img.hidden {
 .footer-links.right .copy,
 .footer-links.right .copy a {
     font-size: .6rem;
+}
+
+.footer-links.right a,
+.footer-links.left a {
+    font-weight: normal;
+    letter-spacing: 0.02em;
 }
 
 .copy a {
@@ -344,13 +348,17 @@ a.email:hover {
   .hamburger-icon {
         display: block; /* Mostrar en versión móvil */
         position: absolute;
-        top: 46%; /* Centrado verticalmente */
+        top: 50%; /* Centrado verticalmente */
         right: 2rem; /* Alineado al extremo derecho */
         transform: translateY(-50%); /* Centrado perfecto */
-        font-size: 1.5rem;
-        margin-right: .6rem;
-        color: white;
-  }
+        font-size: 1rem;
+        padding: 0 .4rem 0 0;
+    }
+
+.hamburger-icon img {
+        width: 25px; /* Ajusta según el tamaño que necesites */
+        height: auto;
+    }
 
   /* Ajustes adicionales si necesitas modificar el logo o el menú */
     .logo img {
