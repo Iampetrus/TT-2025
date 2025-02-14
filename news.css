@@ -276,6 +276,79 @@ picture svg {
     text-decoration: underline; /* Subrayado al pasar el cursor */
     color: #D86028; /* Un tono más brillante al pasar el ratón */
 }
+
+/* news section ------------------------------------------------------------------------------------ */
+
+/* Contenedor de la sección de noticias ocupa solo el 50% y se centra */
+.news-section {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem 0 2rem 0;
+}
+
+/* Distribuye las noticias en un row */
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Cada noticia se organiza de arriba a abajo: foto, fecha y título */
+.news-item {
+  text-align: center;
+  /* Usamos grid para organizar el contenido verticalmente sin flex */
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+  background-color: rgb(249, 246, 238);
+  padding: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-item:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.news-item a{
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.news-item:hover a {
+  color: #fff;
+}
+
+/* Foto responsive */
+.news-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilos para la fecha (Taviraj) */
+.news-date {
+  font-family: 'Taviraj', serif;
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Estilos para el título (Work Sans) */
+.news-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.news-item:hover .news-date,
+.news-item:hover .news-title {
+  color: #fff;
+}
+
 /* Footer ----------------------------------------------------------------------------------- */
 .footer {
     display: flex; 
