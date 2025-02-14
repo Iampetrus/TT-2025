@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,700");
 
+/* Taviraj */
+@font-face {
+  font-family: 'Taviraj';
+  src: url(‘/fonts/Taviraj/Taviraj-VariableFont_wght.ttf’) format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Work Sans */
+@font-face {
+  font-family: 'Work Sans';
+  src: url(‘/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf’) format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 html, body {
     max-width: 1910px; /* Limitar el ancho máximo de todo el layout */
     margin: 0 auto;
@@ -11,7 +27,7 @@ html, body {
 /* tipografia --------------------------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Futura PT', sans-serif; /* Usar Futura PT para los encabezados */
+    font-family: 'Work Sans', sans-serif; /* Usar Futura PT para los encabezados */
 }
 
 body, p, li, a {
@@ -40,13 +56,13 @@ p, li, a {
 }
 
 #projectp p:first-of-type::first-letter {
-  font-size: clamp(3.5rem,6vw, 8rem);
-  font-weight:;
-  float: left; 
-  line-height: 3;
-  color: black;
-  margin:.5rem .3rem 0 0;
-  font-family: 'Jost', sans-serif; /* Consistent font */
+    font-family: 'Jost', sans-serif; /* Consistent font */
+    font-size: clamp(5rem, 7vw, 8rem);
+    font-weight: ;
+    float: left; 
+    line-height: 3;
+    color: black;
+    margin: .4rem .3rem 0 0;
 }
 
 .hidden-h1 {
@@ -124,6 +140,11 @@ p, li, a {
 #mobilemenu {
     display: none;
 }
+
+#menu-selected {
+    white-space: nowrap; /* Evita que el texto pase a la siguiente línea */
+}
+
 
 /* mainpicture -------------------------------------------------------------- */
 
@@ -206,12 +227,17 @@ picture svg {
 }
 
 #projectp p {
-    font-family: "Spectral", serif;
+    font-family: "Taviraj", serif;
     font-weight: 300;
     font-style: normal;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-size: clamp(1rem, 1.3vw, 1.6rem);
     text-align: left;
     padding: 0 1.5rem;
+    hyphens: auto;
+
+    letter-spacing: 0.04em; /* Ajusta el espacio entre las letras */
+    word-spacing: 0.2em; /* Ajusta el espacio entre las palabras */
+    line-height: 1.4; /* Ajusta el espacio entre las líneas */
 }
 
 #projectp {
@@ -228,6 +254,14 @@ picture svg {
   align-items: center; /* Centra la imagen */
   overflow: hidden; /* Evita desbordamientos */
   position: relative; /* Necesario para el posicionamiento absoluto de las imágenes */
+}
+
+#main-title {
+
+}
+
+.date-main{
+    font-size: 1rem;
 }
 
 /* news ----------------------------------------------------------------------- */
@@ -438,7 +472,7 @@ a.email:hover {
         text-decoration: none;
         font-size: 1.5rem;
         margin: .5rem 0;
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Work Sans', sans-serif;
         font-weight: 600;
         transition: color 0.3s ease;
     }
@@ -470,13 +504,26 @@ a.email:hover {
     }
 
     /* news ---------------------------------------------------------------------------------------------------------------------------------------- */
+    .main-title {
+        text-align: left;
+        padding: 0 1.3rem;
+        font-size: 2rem;
+        font-weight: 500;
+        
+
+    line-height:1;
+    letter-spacing:0.05em;
+    hyphens: auto;
+    }
+
     #projectp {
         margin: .8rem 0 0 0;
     }
 
-     .logonews {
+    .logonews {
         margin:.2rem .8rem;
         padding:0 .5rem;
+
     }
 
     .subsection {
@@ -486,8 +533,9 @@ a.email:hover {
     }
 
     #projectdev {
-        font-size: 1.75rem;
-        margin:.6rem 1rem 1rem 1.3rem;
+        font-size: 1rem;
+        margin:0 1rem 1rem 1.3rem;
+
     }
 
     #projectpimg a img {
@@ -497,6 +545,7 @@ a.email:hover {
     #projectp p {
         text-align: justify;
         hyphens: auto;
+        
     }
 
     #projectp p:first-of-type::first-letter {

@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,700");
 
+/* Taviraj */
+@font-face {
+  font-family: 'Taviraj';
+  src: url(‘/fonts/Taviraj/Taviraj-VariableFont_wght.ttf’) format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Work Sans */
+@font-face {
+  font-family: 'Work Sans';
+  src: url(‘/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf’) format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+
 html, body {
     max-width: 1910px; /* Limitar el ancho máximo de todo el layout */
     margin: 0 auto;
@@ -15,7 +32,7 @@ html {
 /* tipografia --------------------------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Futura PT', sans-serif; /* Usar Futura PT para los encabezados */
+    font-family: 'Work_Sans', sans-serif; /* Usar Futura PT para los encabezados */
 }
 
 body, p, li, a {
@@ -43,20 +60,10 @@ p, li, a {
     font-weight: 300;
 }
 
- #servicesp p:first-of-type::first-letter {
+ #servicesp p:first-of-type::first-letter, #projectp p:first-of-type::first-letter {
         font-family: 'Jost', sans-serif; /* Consistent font */
-        font-size: 5.5rem;
+        font-size: clamp(5rem, 7vw, 8rem);
         font-weight: ;
-        float: left; 
-        line-height: 3;
-        color: black;
-        margin: .4rem .3rem 0 0;
-}
-
-#projectp p:first-of-type::first-letter {
-        font-family: 'Jost', sans-serif; /* Consistent font */
-        font-size: 5.5rem;
-        font-weight:;
         float: left; 
         line-height: 3;
         color: black;
@@ -137,6 +144,10 @@ p, li, a {
 
 #mobilemenu {
     display: none;
+}
+
+#menu-selected {
+    white-space: nowrap; /* Evita que el texto pase a la siguiente línea */
 }
 
 /* mainpicture -------------------------------------------------------------- */
@@ -284,12 +295,17 @@ picture svg {
 /* -------------------------------------------------------------------------------- */
 
 #servicesp p, #projectp p {
-    font-family: "Spectral", serif;
+    font-family: "Taviraj", serif;
     font-weight: 300;
     font-style: normal;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    text-align: left;
-    padding: 0 1.5rem
+    font-size: clamp(1rem, 1.3vw, 1.6rem);
+    text-align: justify;
+    padding: 0 1.5rem;
+    hyphens: auto;
+
+    letter-spacing: 0.04em; /* Ajusta el espacio entre las letras */
+    word-spacing: 0.2em; /* Ajusta el espacio entre las palabras */
+    line-height: 1.4; /* Ajusta el espacio entre las líneas */
 }
 
 #servicesp, #projectp {
@@ -500,7 +516,7 @@ picture img {
         text-decoration: none;
         font-size: 1.5rem;
         margin: .5rem 0;
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Work Sans', sans-serif;
         font-weight: 600;
         transition: color 0.3s ease;
     }
@@ -600,11 +616,16 @@ picture img {
         font-size: 2.1rem;
         margin:2.6rem 0 1rem .5rem;
         padding: 0 .5rem;
+        letter-spacing:0.05em;
     }
 
     #servicesp p, #projectp p {
         padding: 0 1rem;
         text-align: justify;
+        letter-spacing: 0.04em; /* Ajusta el espacio entre las letras */
+        word-spacing: 0.2em; /* Ajusta el espacio entre las palabras */
+        line-height: 1.5; /* Ajusta el espacio entre las líneas */
+        hyphens: auto;
     }
 
     /* footer ------------------------------------------------------------------------- */
@@ -655,3 +676,6 @@ picture img {
     padding-right: .5rem; 
     }
 }
+
+
+
