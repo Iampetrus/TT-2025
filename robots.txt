@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://iampetrus.github.io/TT-2025/sitemap.xml
